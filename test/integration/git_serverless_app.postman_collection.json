@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "00e0a909-c517-4212-95c0-081205256c81",
+		"name": "Git-Serverless-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. POST - api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{HOST_PORT}}/api/register",
+					"host": [
+						"{{HOST_PORT}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. GET - api/qr-code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{HOST_PORT}}/api/qr-code",
+					"host": [
+						"{{HOST_PORT}}"
+					],
+					"path": [
+						"api",
+						"qr-code"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

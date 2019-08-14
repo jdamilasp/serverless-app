@@ -59,3 +59,29 @@ typings/
 
 # next.js build output
 .next
+
+
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+# Coverage directory used by tools like istanbul
+/coverage
+
+#OS STUFF
+.DS_Store
+.tmp
+
+# Logs
+logs
+*.log
+npm-debug.log
+
+#IDE related
+.idea/
+/.webpack/
+/.nyc_output/
+
+#IDE - vs-code
+settings.json
