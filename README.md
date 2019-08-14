@@ -1,4 +1,4 @@
-# serverless-app
+# Serverless-app
 Serverless Application 
 
 ## Prerequisites
@@ -97,8 +97,8 @@ Fetch logs of a specific function
 
 | Method                                       |Description                              |
 |----------------------------------------------|-----------------------------------------|
-| POST /rating                                 | Create rating                           |
-| GET /rating/content/{contentId}              | Get rating by content                   |
+| POST /api/register                           | Create User                             |
+| GET /api/qr-code                             | Get QR-Code                             |
 
 #### Common Headers
 
@@ -119,3 +119,71 @@ All the requests should contain following headers.
 |500           | Internal server error                            | 
 
 
+#### 1. User Register
+A user can register giving email,
+
+#### POST {url}/api/register
+
+##### Request
+
+```
+   {
+       "email":"example@email.com"
+   }
+```
+
+##### Response
+
+| Status code  | Value                                                               |               
+|--------------|------------------------------|
+|201           | Created                      | 
+
+```
+   {
+       "userId": "<< SAMPLE USER ID HERE >>",
+       "token": "<< SAMPLE TOKEN HERE >>"
+   }
+```
+
+##### Error Response
+   
+ ```{
+        "errors": [
+            {
+                "status": "400",
+                "title": "Bad Request",
+                "detail": "User email already register"
+            }
+        ]
+    }   
+ ```
+ 
+ #### 2. Get QA-Code
+
+#### GET {url}/api/qr-code
+
+##### Response
+
+| Status code  | Value                                                               |               
+|--------------|------------------------------|
+|200           | OK                           | 
+
+```
+  {
+      "data": "<< SAMPLE DATA HERE >>"
+  }
+```
+
+##### Error Response
+   
+ ```{
+        "errors": [
+            {
+                "status": "404,
+                "title": "Bad Request",
+                "detail": "Insufficient detail to generate qr-code"
+            }
+        ]
+    }   
+ ```
+ 
